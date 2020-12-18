@@ -1,4 +1,4 @@
-import {createApp, h, App} from 'vue'
+import {App, createApp, h} from 'vue'
 
 import {Props} from '@/components/context-menu/types'
 

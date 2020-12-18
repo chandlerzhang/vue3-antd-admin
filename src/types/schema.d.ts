@@ -1,5 +1,4 @@
-import {VNode, ComponentInternalInstance, HTMLAttributes} from 'vue'
-import {RuleObject} from 'ant-design-vue/lib/form/interface'
+import {ComponentInternalInstance, HTMLAttributes, VNode} from 'vue'
 import {FormItemProps} from 'ant-design-vue/lib/form/FormItem'
 import {FormProps, ValidationRule} from 'ant-design-vue/lib/form/Form'
 

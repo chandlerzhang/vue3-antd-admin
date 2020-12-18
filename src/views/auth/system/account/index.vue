@@ -11,7 +11,7 @@
   </dynamic-table>
 </template>
 <script lang="ts">
-import {defineComponent, reactive, toRefs, createVNode, computed, ref} from 'vue'
+import {computed, createVNode, defineComponent, reactive, ref, toRefs} from 'vue'
 import {Modal} from 'ant-design-vue'
 import {QuestionCircleOutlined} from '@ant-design/icons-vue'
 import {DynamicTable} from '@/components/dynamic-table'

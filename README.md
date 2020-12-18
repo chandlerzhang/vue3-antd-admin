@@ -1,4 +1,11 @@
 # vue3-antd
+
+yarn upgrade-interactive --latest
+https://www.cnblogs.com/maggieq8324/p/11458752.html
+
+
+
+
 基于vue-cli / vite + vue3.0 + antd2.0 + ts4.0 的后台管理系统模板
 - 账号：admin，密码：123456
 - 在线预览：http://buqiyuan.gitee.io/vue3-antd-admin/

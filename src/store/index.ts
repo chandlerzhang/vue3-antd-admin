@@ -1,4 +1,4 @@
-import { createStore } from 'vuex'
+import {createStore} from 'vuex'
 import getters from "@/store/getters";
 import modules from '@/store/modules'
 import {App} from "vue";

@@ -5,18 +5,18 @@ import {AxiosTransform} from './axiosTransform';
 import {AxiosResponse} from 'axios';
 import qs from 'qs'
 import {checkStatus} from './checkStatus';
-import {Modal, message as Message} from "ant-design-vue";
-import {RequestEnum, ResultEnum, ContentTypeEnum} from '@/enums/httpEnum';
+import {message as Message, Modal} from "ant-design-vue";
+import {ContentTypeEnum, RequestEnum, ResultEnum} from '@/enums/httpEnum';
 
 import {isString} from '@/utils/is/index';
 import {setObjToUrlParams} from '@/utils/urlUtils'
 
 import {RequestOptions, Result} from './types';
-
-const isDev = process.env.NODE_ENV === 'development'
 import router from '@/router'
 import store from '@/store'
 import {createStorage} from "@/utils/Storage";
+
+const isDev = process.env.NODE_ENV === 'development'
 const storage = createStorage()
 /**
  * @description: 数据处理，方便区分多种处理方式

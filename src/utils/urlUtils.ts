@@ -8,7 +8,7 @@
  *  setObjToUrlParams('www.baidu.com', obj)
  *  ==>www.baidu.com?a=3&b=4
  */
-export function setObjToUrlParams(baseUrl: string, obj: object): string {
+export function setObjToUrlParams(baseUrl: string, obj: any): string {
   let parameters = '';
   let url = '';
   for (const key in obj) {

@@ -5,7 +5,6 @@ import {routes} from "@/router/index";
 import {notFound} from '@/router/modules/error'
 import {Empty} from 'ant-design-vue'
 import common from "@/router/common";
-import store from "@/store";
 
 /**
  * 数组转树形结构

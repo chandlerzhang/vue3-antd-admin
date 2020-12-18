@@ -1,4 +1,4 @@
-import {Ref, isReactive, isRef} from 'vue'
+import {isReactive, isRef} from 'vue'
 
 function setLoading(loading, val) {
     if (loading != undefined && isRef(loading)) {

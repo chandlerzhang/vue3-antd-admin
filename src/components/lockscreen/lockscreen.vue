@@ -11,10 +11,6 @@
         </div>
         <h6 class="tips">由于您长时间未操作，需重新输入登录密码解锁进入系统。</h6>
       </div>
-      <!--      华为充电-->
-      <component :is="Math.random() > 0.48 ? 'xiaomi-charge' : 'huawei-charge'" :battery="battery"
-                 :battery-status="batteryStatus" :calc-discharging-time="calcDischargingTime"/>
-      <!--      <xiaomi-charge :battery="battery" />-->
     </template>
     <template v-if="isShowLogin">
       <div class="login-box">
@@ -49,12 +45,6 @@
           {{ month }}月{{ day }}号，星期{{ week }}
         </div>
       </div>
-      <div class="computer-status">
-      <span :class="{offline: !online}" class="network">
-        <wifi-outlined class="network"/>
-      </span>
-        <api-outlined/>
-      </div>
     </template>
   </div>
 </template>
@@ -73,13 +63,8 @@ import {
 } from '@ant-design/icons-vue'
 
 import {useRouter, useRoute} from "vue-router";
-import {useOnline} from '@/hooks/useOnline'
 import {useTime} from '@/hooks/useTime'
 import {login} from "@/api/system/user";
-// import md5 from 'blueimp-md5'
-import HuaweiCharge from './huawei-charge.vue'
-import XiaomiCharge from './xiaomi-charge.vue'
-import {useBattery} from '@/hooks/useBattery'
 import {useStore} from "vuex";
 
 export default defineComponent({
@@ -93,19 +78,15 @@ export default defineComponent({
     ApiOutlined,
     WifiOutlined,
     [Avatar.name]: Avatar,
-    HuaweiCharge, XiaomiCharge
   },
   setup(props, {emit}) {
     const store = useStore()
     const isLock = computed(() => store.state.lockscreen.isLock)
     // 获取本地时间
     const {month, day, hour, minute, second, week} = useTime()
-    const {online} = useOnline()
 
     const router = useRouter()
     const route = useRoute()
-
-    const {battery, batteryStatus, calcDischargingTime} = useBattery()
 
     const state = reactive({
       isShowLogin: false,
@@ -149,11 +130,7 @@ export default defineComponent({
 
     return {
       ...toRefs(state),
-      online,
       month, day, hour, minute, second, week,
-      battery,
-      batteryStatus,
-      calcDischargingTime,
       unLockLogin,
       onLogin,
       nav2login

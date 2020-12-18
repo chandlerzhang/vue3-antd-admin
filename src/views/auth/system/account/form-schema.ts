@@ -1,5 +1,5 @@
 import {FormSchema} from "@/types/schema";
-import {getAdminRole, getAdminRoleAccess} from "@/api/system/role";
+import {getAdminRole} from "@/api/system/role";
 
 // 与vue2的里面的data一样，函数返回新对象防止多处共用同一对象,造成数据混乱
 export const getFormSchema = (): FormSchema => ({

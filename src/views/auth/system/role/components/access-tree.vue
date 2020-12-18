@@ -14,8 +14,8 @@
 </template>
 
 <script lang="ts">
-import {defineComponent, reactive, toRefs, computed, onMounted} from 'vue'
-import {Tree, Spin} from 'ant-design-vue'
+import {computed, defineComponent, onMounted, reactive, toRefs} from 'vue'
+import {Spin, Tree} from 'ant-design-vue'
 import {getAdminRoleAccess} from '@/api/system/role'
 
 export default defineComponent({

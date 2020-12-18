@@ -11,13 +11,12 @@
   </dynamic-table>
 </template>
 <script lang="ts">
-import {defineComponent, reactive, toRefs, createVNode, computed, ref} from 'vue'
+import {computed, createVNode, defineComponent, reactive, ref, toRefs} from 'vue'
 import {Modal} from 'ant-design-vue'
 import {QuestionCircleOutlined} from '@ant-design/icons-vue'
 import {DynamicTable} from '@/components/dynamic-table'
 import {delAdminRole, getAdminRole, postAdminRole} from '@/api/system/role'
 import {columns} from "./columns";
-import {hasPermission} from "@/utils/permission/hasPermission";
 import {useFormModal} from "@/hooks/useFormModal";
 import {getFormSchema} from "./form-schema";
 
@@ -68,9 +67,6 @@ export default defineComponent({
           tableRef.value.refreshTableData()
         }
       })
-      // useCreateModal(OperateModal, {
-      //   callback: () => tableRef.value.refreshTableData()
-      // })
     }
     const isDisabled = computed(() => state.rowSelection.selectedRowKeys.length == 0)
 

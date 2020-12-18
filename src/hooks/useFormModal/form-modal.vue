@@ -11,13 +11,10 @@
 </template>
 
 <script lang="ts">
-import {defineComponent, reactive, toRefs, ref, PropType} from 'vue'
+import {defineComponent, PropType, reactive, ref, toRefs} from 'vue'
 import {Modal} from 'ant-design-vue'
-import {useAsync} from "@/hooks";
 import {SchemaForm} from '@/components/JSON-schema-form'
-import {patchAdminDictConfig, postAdminDictConfig} from "@/api/system/dict";
 import {FormSchema} from "@/types/schema";
-import {cloneDeep} from "@/utils/lodashChunk";
 
 export default defineComponent({
   name: "operate-modal",

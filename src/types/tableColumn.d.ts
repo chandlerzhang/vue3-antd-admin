@@ -1,4 +1,4 @@
-import {ColumnProps, TableProps} from 'ant-design-vue/lib/table/interface'
+import {ColumnProps} from 'ant-design-vue/lib/table/interface'
 
 export declare interface ActionOptions {
     type: 'select' | 'button' | 'text' | 'popconfirm'; // 控制类型，默认为a,可选： select | button | text

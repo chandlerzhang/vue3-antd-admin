@@ -19,7 +19,9 @@ module.exports = {
         requireModuleExtension: true, // 是否开启CSSmodule并保留xxx.module.css后缀
         loaderOptions: {
             less: {
-                javascriptEnabled: true
+                lessOptions: {
+                    javascriptEnabled: true,
+                },
             },
             sass: {additionalData: `@import "@/styles/global.scss";`}
         }

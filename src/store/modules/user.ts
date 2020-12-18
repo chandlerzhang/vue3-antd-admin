@@ -1,6 +1,6 @@
 import {Module} from 'vuex'
 import {createStorage} from '@/utils/Storage'
-import {login, getUserInfo, logout} from '@/api/system/user'
+import {getUserInfo, login} from '@/api/system/user'
 import {ACCESS_TOKEN, CURRENT_USER} from '@/store/mutation-types'
 // import { welcome } from '@/utils/util'
 

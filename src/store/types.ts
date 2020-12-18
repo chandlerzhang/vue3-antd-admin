@@ -1,4 +1,4 @@
-import { UserStateType } from '@/store/modules/user'
+import {UserStateType} from '@/store/modules/user'
 
 // vuex state 的模块的类型
 type ModuleType = {

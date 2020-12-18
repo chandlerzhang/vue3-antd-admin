@@ -12,14 +12,13 @@
   </dynamic-table>
 </template>
 <script lang="ts">
-import {defineComponent, reactive, toRefs, createVNode, computed, ref} from 'vue'
+import {computed, createVNode, defineComponent, reactive, ref, toRefs} from 'vue'
 import {Modal} from 'ant-design-vue'
 import {QuestionCircleOutlined} from '@ant-design/icons-vue'
 import {DynamicTable} from '@/components/dynamic-table'
-import {delAdminDictConfig, getAdminDictConfig, patchAdminDictConfig, postAdminDictConfig} from '@/api/system/dict'
+import {delAdminDictConfig, getAdminDictConfig, postAdminDictConfig} from '@/api/system/dict'
 import {getFormSchema} from "./form-schema"
 import {columns} from "./columns";
-import {hasPermission} from "@/utils/permission/hasPermission";
 import {useFormModal} from "@/hooks/useFormModal/";
 
 export default defineComponent({

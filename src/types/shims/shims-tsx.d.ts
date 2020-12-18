@@ -1,8 +1,8 @@
-import Vue, { VNode } from "vue"
+import Vue, {VNode} from "vue"
 
 declare module '*.tsx' {
-  import Vue from 'compatible-vue';
-  export default Vue;
+    import Vue from 'compatible-vue';
+    export default Vue;
 }
 
 declare global {

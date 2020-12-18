@@ -1,5 +1,5 @@
 // create-api.ts
-import {App, createVNode, render, ref, mergeProps , ComponentOptions} from 'vue'
+import {createVNode, render} from 'vue'
 import FormModal from './form-modal.vue'
 import {FormSchema} from "@/types/schema";
 
@@ -11,7 +11,7 @@ interface ModalInstance {
 interface Options {
     handleOk: (modelRef: any, state) => Promise<any>; // 点击提交表单
     formSchema: FormSchema; // 表单描述属性
-    fields?: object; // 字段默认填充值，一般编辑表单是传入
+    fields?: any; // 字段默认填充值，一般编辑表单是传入
     hiddenFields?: string[]; // 需要隐藏的表单项
     [key: string]: any;
 }
@@ -31,7 +31,7 @@ export const useFormModal = (options: Options): any => {
         _instance = null
         container.remove()
     }
-    const formModal = createVNode(FormModal, {...options,remove})
+    const formModal = createVNode(FormModal as any, {...options,remove})
     render(formModal, container)
     return _instance
 }

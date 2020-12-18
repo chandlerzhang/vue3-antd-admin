@@ -3,7 +3,7 @@
  */
 // import { constantRouterMap } from '@/config/router.config'
 import {Module} from 'vuex'
-import { generatorDynamicRouter } from '@/router/generator-routers'
+import {generatorDynamicRouter} from '@/router/generator-routers'
 
 const state = {
     addRouters: [],

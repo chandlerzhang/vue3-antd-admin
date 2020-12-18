@@ -1,4 +1,4 @@
-import { RoleEnum } from '@/enums/roleEnum';
+import {RoleEnum} from '@/enums/roleEnum';
 
 /**
  * @description: 登陆接口参数

@@ -1,10 +1,5 @@
 import http from '@/utils/http/axios';
-import {
-  LoginParams,
-  LoginResultModel,
-  GetUserInfoByUserIdParams,
-  GetUserInfoByUserIdModel,
-} from './model/userModel';
+import {LoginParams,} from './model/userModel';
 
 enum Api {
   login = '/admin/login',
